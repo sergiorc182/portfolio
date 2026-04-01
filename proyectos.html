@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos - Sergio Esteban Mansilla</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">Sergio Mansilla</a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="projects-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="projects-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#about">Sobre mi</a></li>
+                <li><a href="index.html#skills">Aptitudes</a></li>
+                <li><a href="index.html#education">Formacion</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="index.html#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header style="padding-top: 80px;">
+        <h1 class="title">Mis Proyectos</h1>
+        <p class="subtitle">Desarrollo de software aplicado a casos reales</p>
+    </header>
+
+    <section style="max-width: 1000px;">
+        <div class="projects-container">
+            <div class="project-card">
+                <h2 class="project-title">Sistema de Gestion para Kiosco</h2>
+
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Tkinter</span>
+                    <span class="tech-tag">POO</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
+
+                <p class="project-description">
+                    Sistema completo de gestion para un kiosco desarrollado en Python con interfaz grafica Tkinter.
+                    Incluye ventas, inventario, proveedores, turnos de empleados y reportes con una arquitectura modular y mantenible.
+                </p>
+
+                <p class="project-description">
+                    <strong>Caracteristicas principales:</strong> registro y venta de productos, control de stock,
+                    facturacion, historial de movimientos y alertas de bajo inventario.
+                </p>
+
+                <p class="project-description">
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/sergiorc182/Kiosco-CRM" target="_blank" rel="noopener noreferrer">Kiosco-CRM</a>
+                </p>
+
+                <a href="proyecto-kiosco.html" class="project-link">Ver detalles del proyecto</a>
+            </div>
+
+            <div class="project-card">
+                <h2 class="project-title">Sistema de Gestion para Farmacia POS</h2>
+
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">Swing</span>
+                    <span class="tech-tag">POO</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
+
+                <p class="project-description">
+                    Sistema de escritorio para farmacia con punto de venta, control de caja, gestion de compras,
+                    clientes, proveedores, historial de ventas y administracion de usuarios con roles.
+                </p>
+
+                <p class="project-description">
+                    <strong>Caracteristicas principales:</strong> POS completo, control de inventario y stock,
+                    reportes operativos y una interfaz desarrollada en Java Swing orientada al trabajo diario.
+                </p>
+
+                <p class="project-description">
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/sergiorc182/Sistema-Farmacia-POS" target="_blank" rel="noopener noreferrer">Sistema-Farmacia-POS</a>
+                </p>
+
+                <a href="proyecto-farmacia.html" class="project-link">Ver detalles del proyecto</a>
+            </div>
+
+            <div class="project-card">
+                <h2 class="project-title">Otros Proyectos Academicos</h2>
+
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JavaScript y variantes</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL, SQL Server, MongoDB, SQLite</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">SCRUM, GitHub, Windows Server</span>
+                </div>
+
+                <p class="project-description">
+                    Durante mi formacion desarrolle distintos proyectos academicos y practicos, entre ellos:
+                </p>
+
+                <ul style="list-style: none; padding-left: 20px; text-align: left;">
+                    <li>• Sistema de gestion bibliotecaria con Java y MySQL</li>
+                    <li>• Aplicacion de control de gastos personales en Python</li>
+                    <li>• Simulador de procesos de CPU en Java</li>
+                    <li>• Base de datos para clinica medica</li>
+                    <li>• Sistema de gestion para farmacias con Java Swing y MySQL</li>
+                    <li>• API REST para concesionaria con Java, Spring Boot, React y MySQL</li>
+                    <li>• Sistema de reservas para hotel con PHP y MySQL</li>
+                </ul>
+
+                <p class="project-description">
+                    Todos aplicando metodologias agiles y buenas practicas de desarrollo en capas.
+                </p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+    </section>
+
+    <canvas id="background"></canvas>
+    <script src="js/script.js"></script>
+</body>
+</html>
