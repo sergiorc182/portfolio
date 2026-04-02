@@ -3,91 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Sergio Esteban Mansilla</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Sergio Mansilla | Desarrollador Backend Junior | Java | Spring Boot | Python</title>
+    <meta name="description" content="Portfolio de Sergio Mansilla, estudiante de Analisis de Sistemas enfocado en desarrollo backend con Java, Python, MySQL y Spring Boot.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
     <nav class="navbar">
         <div class="nav-inner">
-        <a href="index.html" class="brand">Sergio Mansilla</a>
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul id="main-menu">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#skills">Aptitudes</a></li>
-            <li><a href="#education">Formación</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
+            <a href="index.html" class="brand">
+                <span class="brand-mark">SM</span>
+                <span class="brand-text">Sergio Mansilla</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="main-menu">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre mi</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Formacion</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
         </div>
     </nav>
-    <header>
-        <h1 class="title">Sergio Esteban Mansilla</h1>
-        <p class="subtitle">"Estudiante de Análisis de Sistemas apasionado por el desarrollo de software"</p>
-    </header>
 
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Estudiante de Análisis de Sistemas con formación en desarrollo de aplicaciones y bases de datos SQL. Experiencia en proyectos
-        académicos y freelance utilizando diferentes tecnologías entre ellas Python, Java, Javascript y frameworks. Mi enfoque principal
-        es en el backend con una gran capacidad de adaptabilidad y resolución de problemas complejos.
-        Busco integrarme a un equipo dinamico donde pueda aplicar mi mentalidad analítica y aprender nuevas tecnologias, aportando
-        valor tanto en lo tecnico como en la visión de negocio.</p>
-    </section>
+    <main>
+        <section id="hero" class="hero section-shell">
+            <div class="hero-copy reveal">
+                <span class="eyebrow">Backend Developer Junior</span>
+                <h1 class="title">Construyo sistemas utiles, escalables y pensados para resolver problemas reales.</h1>
+                <p class="subtitle">
+                    Soy Sergio Mansilla, estudiante de Analisis de Sistemas enfocado en backend. Trabajo con Java, Python,
+                    MySQL, Spring Boot, JavaScript y React para desarrollar aplicaciones con logica clara, datos bien organizados
+                    y una mirada orientada al negocio.
+                </p>
+                <div class="hero-actions">
+                    <a href="proyectos.html" class="button button-primary">Ver proyectos</a>
+                    <a href="#contact" class="button button-secondary">Contactarme</a>
+                </div>
+                <div class="hero-tech">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Python</span>
+                    <span>MySQL</span>
+                    <span>Node.js</span>
+                    <span>React</span>
 
-    <section id="skills">
-        <h2>Aptitudes Técnicas</h2>
-        <ul>
-            <li><b>Lenguajes:</b> Python, Java, JavaScript, Node.js, PHP</li>
-            <li><b>Web y frameworks:</b> React, Angular, TypeScript, Html/Css</li>
-            <li><b>Bases de datos:</b> PostgreSQL, MySQL, MongoDB</li>
-            <li><b>Herramientas:</b> Metodologías Ágiles, IDEs, Git/Github, Windows Server, Firebase</li>
-        </ul>
-    </section>
-
-    <section id="education">
-        <h2>Formación</h2>
-        <ul>
-            <li>Tecnicatura: Analista de Sistemas, Instituto de formación técnica 182 (En curso 3do Año)</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Proyectos Destacados</h2>
-        <p>Explora mis proyectos principales haciendo clic en el enlace de "Proyectos" en el menú.</p>
-        <p>O visita directamente: <a href="proyectos.html" style="color: #e0aaff; text-decoration: none; font-weight: bold;">Ver todos los proyectos →</a></p>
-    </section>
-
-    <section id="contact">
-        <h2>Contáctame</h2>
-        
-        <!-- Botón de WhatsApp -->
-        <div class="whatsapp-button-container">
-            <a href="https://wa.me/5491151040619" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> Enviar mensaje por WhatsApp
-            </a>
-        </div>
-        <div class="contact-info">
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:yuthielmansillarc@gmail.com?subject=Contacto desde Portafolio&body=Hola Sergio, te contacto desde tu portafolio web." target="_blank">yuthielmansillarc@gmail.com</a>
+                </div>
             </div>
-            
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Buenos Aires, Argentina</span>
+
+            <div class="hero-panel reveal">
+                <div class="hero-card hero-card-main">
+                    <p class="hero-card-label">Perfil</p>
+                    <h2>Desarrollador backend</h2>
+                    <p>
+                        Me enfoco en logica de negocio, bases de datos, APIs y sistemas de gestion.
+                        Busco mi primera experiencia IT para aportar criterio tecnico, compromiso y ganas de aprender rapido en un entorno dinamico.
+                    </p>
+                </div>
+                <div class="hero-metrics">
+                    <article class="metric-card reveal">
+                        <strong>+5</strong>
+                        <span>Proyectos reales de gestion</span>
+                    </article>
+                    <article class="metric-card reveal">
+                        <strong>Backend</strong>
+                        <span>Orientado a negocio y datos</span>
+                    </article>
+                    <article class="metric-card reveal">
+                        <strong>Junior</strong>
+                        <span>Con base tecnica y mentalidad de mejora</span>
+                    </article>
+                </div>
             </div>
-        </div>
-        
-        <div class="contact-note">
-            <p>Estoy disponible para oportunidades laborales, proyectos freelance o colaboraciones en entornos dinámicos.</p>
-        </div>
-    </section>
+        </section>
+
+        <section id="about" class="section-shell">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Sobre mi</span>
+                <h2>Perfil profesional claro, orientado a backend</h2>
+            </div>
+            <div class="about-grid">
+                <article class="info-card reveal">
+                    <p>
+                        Soy estudiante de Analisis de Sistemas y estoy construyendo mi perfil profesional como desarrollador backend.
+                        Disfruto transformar necesidades reales en sistemas ordenados, utiles y mantenibles, especialmente cuando
+                        involucran logica de negocio, persistencia de datos y procesos operativos.
+                    </p>
+                </article>
+                <article class="info-card reveal">
+                    <p>
+                        Me interesa crecer dentro de equipos donde pueda seguir aprendiendo, recibir feedback y aportar desde el primer dia.
+                        Mi objetivo es sumar valor con una base tecnica solida, capacidad de adaptacion y enfoque en resolver problemas concretos.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section-shell">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Stack</span>
+                <h2>Tecnologias con las que puedo aportar</h2>
+            </div>
+            <div class="skills-layout">
+                <article class="skill-group reveal">
+                    <h3>Backend</h3>
+                    <div class="badge-grid">
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">Spring Boot</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">PHP</span>
+                        <span class="skill-badge">APIs REST</span>
+                    </div>
+                </article>
+                <article class="skill-group reveal">
+                    <h3>Frontend</h3>
+                    <div class="badge-grid">
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                    </div>
+                </article>
+                <article class="skill-group reveal">
+                    <h3>Datos y herramientas</h3>
+                    <div class="badge-grid">
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Git & GitHub</span>
+                        <span class="skill-badge">SCRUM</span>
+                        <span class="skill-badge">Windows Server</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="education" class="section-shell">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Formacion</span>
+                <h2>Base academica y aprendizaje continuo</h2>
+            </div>
+            <div class="timeline-card reveal">
+                <span class="timeline-tag">En curso</span>
+                <h3>Tecnicatura en Analisis de Sistemas</h3>
+                <p>Instituto de Formacion Tecnica 182</p>
+                <p>Actualmente cursando 3er año con foco en desarrollo de software, bases de datos y analisis de sistemas.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="section-shell">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Casos reales</span>
+                <h2>Proyectos que muestran como pienso y construyo software</h2>
+                <p>
+                    Trabaje sobre sistemas de gestion enfocados en procesos reales: ventas, inventario, usuarios, stock,
+                    compras y control operativo. Cada proyecto busca resolver un problema concreto con una base tecnica clara.
+                </p>
+            </div>
+            <div class="project-preview-grid">
+                <article class="feature-project reveal">
+                    <div class="feature-project-top">
+                        <span class="feature-project-tag">Caso real 01</span>
+                        <h3>Sistema de Gestion para Kiosco</h3>
+                    </div>
+                    <p>
+                        CRM operativo para un kiosco con ventas, stock, proveedores, turnos y reportes.
+                        Diseñado para ordenar tareas diarias y centralizar informacion clave.
+                    </p>
+                    <div class="inline-badges">
+                        <span>Python</span>
+                        <span>Tkinter</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="proyecto-kiosco.html" class="button button-primary">Ver caso</a>
+                        <a href="https://github.com/sergiorc182/Kiosco-CRM" class="button button-secondary" target="_blank" rel="noopener noreferrer">Ver codigo</a>
+                    </div>
+                </article>
+                <article class="feature-project reveal">
+                    <div class="feature-project-top">
+                        <span class="feature-project-tag">Caso real 02</span>
+                        <h3>Sistema de Gestion para Farmacia POS</h3>
+                    </div>
+                    <p>
+                        Sistema de escritorio para punto de venta y administracion interna con caja, compras,
+                        clientes, proveedores, historial de ventas y gestion de usuarios, pensado para mejorar la operacion de una farmacia.
+                    </p>
+                    <div class="inline-badges">
+                        <span>Java</span>
+                        <span>Swing</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="proyecto-farmacia.html" class="button button-primary">Ver caso</a>
+                        <a href="https://github.com/sergiorc182/Sistema-Farmacia-POS" class="button button-secondary" target="_blank" rel="noopener noreferrer">Ver codigo</a>
+                    </div>
+                </article>
+            </div>
+            <div class="projects-cta reveal">
+                <a href="proyectos.html" class="button button-secondary">Explorar todos los proyectos</a>
+            </div>
+        </section>
+
+        <section id="contact" class="section-shell">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Contacto</span>
+                <h2>Disponible para mi primera oportunidad IT</h2>
+                <p>
+                    Si estas buscando un perfil junior con foco backend, compromiso y muchas ganas de crecer, podemos hablar.
+                </p>
+            </div>
+            <div class="contact-grid">
+                <a class="contact-card reveal" href="mailto:yuthielmansillarc@gmail.com?subject=Contacto%20desde%20tu%20portfolio" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>sergiomansilla@gmail.com</p>
+                    </div>
+                </a>
+                <a class="contact-card reveal" href="https://github.com/sergiorc182" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>github.com/sergiorc182</p>
+                    </div>
+                </a>
+                <a class="contact-card reveal" href="https://www.linkedin.com/in/sergiomansilla-data" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p>linkedin.com/in/sergiomansilla-data</p>
+                    </div>
+                </a>
+                <a class="contact-card reveal" href="https://wa.me/5491151040619" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>Contacto rapido para entrevistas y oportunidades.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <canvas id="background"></canvas>
     <script src="js/script.js"></script>

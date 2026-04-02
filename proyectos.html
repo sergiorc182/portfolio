@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Proyectos - Sergio Esteban Mansilla</title>
+    <title>Proyectos | Sergio Mansilla</title>
+    <meta name="description" content="Casos reales desarrollados por Sergio Mansilla: sistemas de gestion, backend, bases de datos y herramientas orientadas al negocio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
+<body data-page="projects">
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="brand">Sergio Mansilla</a>
+            <a href="index.html" class="brand">
+                <span class="brand-mark">SM</span>
+                <span class="brand-text">Sergio Mansilla</span>
+            </a>
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="projects-menu">
                 <span></span>
                 <span></span>
@@ -19,112 +26,97 @@
             <ul id="projects-menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#about">Sobre mi</a></li>
-                <li><a href="index.html#skills">Aptitudes</a></li>
-                <li><a href="index.html#education">Formacion</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Destacados</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="index.html#contact">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <header style="padding-top: 80px;">
-        <h1 class="title">Mis Proyectos</h1>
-        <p class="subtitle">Desarrollo de software aplicado a casos reales</p>
-    </header>
-
-    <section style="max-width: 1000px;">
-        <div class="projects-container">
-            <div class="project-card">
-                <h2 class="project-title">Sistema de Gestion para Kiosco</h2>
-
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Tkinter</span>
-                    <span class="tech-tag">POO</span>
-                    <span class="tech-tag">MySQL</span>
-                </div>
-
-                <p class="project-description">
-                    Sistema completo de gestion para un kiosco desarrollado en Python con interfaz grafica Tkinter.
-                    Incluye ventas, inventario, proveedores, turnos de empleados y reportes con una arquitectura modular y mantenible.
-                </p>
-
-                <p class="project-description">
-                    <strong>Caracteristicas principales:</strong> registro y venta de productos, control de stock,
-                    facturacion, historial de movimientos y alertas de bajo inventario.
-                </p>
-
-                <p class="project-description">
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/sergiorc182/Kiosco-CRM" target="_blank" rel="noopener noreferrer">Kiosco-CRM</a>
-                </p>
-
-                <a href="proyecto-kiosco.html" class="project-link">Ver detalles del proyecto</a>
-            </div>
-
-            <div class="project-card">
-                <h2 class="project-title">Sistema de Gestion para Farmacia POS</h2>
-
-                <div class="project-tech">
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">Swing</span>
-                    <span class="tech-tag">POO</span>
-                    <span class="tech-tag">MySQL</span>
-                </div>
-
-                <p class="project-description">
-                    Sistema de escritorio para farmacia con punto de venta, control de caja, gestion de compras,
-                    clientes, proveedores, historial de ventas y administracion de usuarios con roles.
-                </p>
-
-                <p class="project-description">
-                    <strong>Caracteristicas principales:</strong> POS completo, control de inventario y stock,
-                    reportes operativos y una interfaz desarrollada en Java Swing orientada al trabajo diario.
-                </p>
-
-                <p class="project-description">
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/sergiorc182/Sistema-Farmacia-POS" target="_blank" rel="noopener noreferrer">Sistema-Farmacia-POS</a>
-                </p>
-
-                <a href="proyecto-farmacia.html" class="project-link">Ver detalles del proyecto</a>
-            </div>
-
-            <div class="project-card">
-                <h2 class="project-title">Otros Proyectos Academicos</h2>
-
-                <div class="project-tech">
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">JavaScript y variantes</span>
-                    <span class="tech-tag">HTML/CSS</span>
-                    <span class="tech-tag">PHP</span>
-                    <span class="tech-tag">MySQL, SQL Server, MongoDB, SQLite</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">SCRUM, GitHub, Windows Server</span>
-                </div>
-
-                <p class="project-description">
-                    Durante mi formacion desarrolle distintos proyectos academicos y practicos, entre ellos:
-                </p>
-
-                <ul style="list-style: none; padding-left: 20px; text-align: left;">
-                    <li>• Sistema de gestion bibliotecaria con Java y MySQL</li>
-                    <li>• Aplicacion de control de gastos personales en Python</li>
-                    <li>• Simulador de procesos de CPU en Java</li>
-                    <li>• Base de datos para clinica medica</li>
-                    <li>• Sistema de gestion para farmacias con Java Swing y MySQL</li>
-                    <li>• API REST para concesionaria con Java, Spring Boot, React y MySQL</li>
-                    <li>• Sistema de reservas para hotel con PHP y MySQL</li>
-                </ul>
-
-                <p class="project-description">
-                    Todos aplicando metodologias agiles y buenas practicas de desarrollo en capas.
+    <main>
+        <section class="page-hero section-shell">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Proyectos</span>
+                <h1 class="title">Casos reales construidos para resolver operaciones concretas</h1>
+                <p class="subtitle">
+                    Estos proyectos muestran mi forma de trabajar: entender un problema, modelar la logica, organizar datos
+                    y construir una solucion clara para el usuario final.
                 </p>
             </div>
-        </div>
+        </section>
 
-        <a href="index.html" class="back-link">← Volver al inicio</a>
-    </section>
+        <section class="section-shell">
+            <div class="projects-container case-grid">
+                <article class="project-card project-case reveal">
+                    <div class="case-head">
+                        <span class="feature-project-tag">Caso real 01</span>
+                        <h2 class="project-title">Sistema de Gestion para Kiosco</h2>
+                    </div>
+                    <p class="case-problem"><strong>Problema:</strong> centralizar ventas, stock, proveedores y turnos en una unica herramienta para mejorar el control diario del negocio.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">POO</span>
+                    </div>
+                    <p class="project-description">
+                        Desarrolle un sistema de escritorio con modulos para caja, inventario, usuarios, reportes y proveedores.
+                        La arquitectura orientada a objetos facilita mantenimiento, escalabilidad y separacion de responsabilidades.
+                    </p>
+                    <div class="project-actions">
+                        <a href="proyecto-kiosco.html" class="button button-primary">Ver caso</a>
+                        <a href="https://github.com/sergiorc182/Kiosco-CRM" class="button button-secondary" target="_blank" rel="noopener noreferrer">Ver codigo</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-case reveal">
+                    <div class="case-head">
+                        <span class="feature-project-tag">Caso real 02</span>
+                        <h2 class="project-title">Sistema de Gestion para Farmacia POS</h2>
+                    </div>
+                    <p class="case-problem"><strong>Problema:</strong> mejorar la operacion interna de una farmacia con un flujo mas ordenado para ventas, caja, compras, clientes y roles de usuario.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Swing</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">POO</span>
+                    </div>
+                    <p class="project-description">
+                        Construido como sistema POS de escritorio, con una interfaz enfocada en productividad operativa.
+                        Incluye modulos de caja, historial de ventas, compras, proveedores, usuarios y administracion general.
+                    </p>
+                    <div class="project-actions">
+                        <a href="proyecto-farmacia.html" class="button button-primary">Ver caso</a>
+                        <a href="https://github.com/sergiorc182/Sistema-Farmacia-POS" class="button button-secondary" target="_blank" rel="noopener noreferrer">Ver codigo</a>
+                    </div>
+                </article>
+
+                <article class="project-card project-case reveal">
+                    <div class="case-head">
+                        <span class="feature-project-tag">Experiencia complementaria</span>
+                        <h2 class="project-title">Otros proyectos academicos y practicos</h2>
+                    </div>
+                    <p class="project-description">
+                        Durante mi formacion tambien trabaje en proyectos de biblioteca, clinica medica, simulacion de CPU,
+                        control de gastos, reservas hoteleras y APIs con Java, Spring Boot, React, PHP y distintas bases de datos.
+                    </p>
+                    <ul class="features-list">
+                        <li>Biblioteca con Java y MySQL.</li>
+                        <li>Control de gastos personales en Python.</li>
+                        <li>Simulador de procesos de CPU en Java.</li>
+                        <li>Base de datos para clinica medica.</li>
+                        <li>API REST para concesionaria con Java, Spring Boot y React.</li>
+                        <li>Sistema de reservas para hotel con PHP y MySQL.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="projects-cta reveal">
+                <a href="index.html" class="button button-secondary">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
 
     <canvas id="background"></canvas>
     <script src="js/script.js"></script>

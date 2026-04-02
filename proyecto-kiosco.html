@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Kiosco - Sergio Esteban Mansilla</title>
+    <title>Proyecto Kiosco | Sergio Mansilla</title>
+    <meta name="description" content="Caso real de sistema de gestion para kiosco desarrollado por Sergio Mansilla con Python, Tkinter y MySQL.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="project-detail">
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="brand">Sergio Mansilla</a>
+            <a href="index.html" class="brand">
+                <span class="brand-mark">SM</span>
+                <span class="brand-text">Sergio Mansilla</span>
+            </a>
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="detail-menu">
                 <span></span>
                 <span></span>
@@ -24,73 +32,92 @@
         </div>
     </nav>
 
-    <header class="project-header">
-        <h1 class="title">Sistema de Gestion para Kiosco</h1>
-        <p class="subtitle">Python • Tkinter • POO • MySQL</p>
-    </header>
-
-    <section class="project-detail">
-        <div class="project-image">
-            <div class="image-placeholder">
-                <div class="imagenes"><img src="img/main.png" alt="Pantalla principal - Sistema Kiosco" loading="lazy"></div>
-                <p>Interfaz moderna y segura para autenticacion de usuarios.</p>
+    <main>
+        <section class="page-hero section-shell">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Caso real</span>
+                <h1 class="title">Sistema de Gestion para Kiosco</h1>
+                <p class="subtitle">Python, Tkinter, MySQL y orientacion a objetos para ordenar la operacion diaria de un comercio.</p>
             </div>
-        </div>
+        </section>
 
-        <h2>Descripcion del Proyecto</h2>
-        <p>
-            Sistema completo desarrollado en Python para la gestion integral de un kiosco o pequeno comercio.
-            La aplicacion permite administrar inventario, realizar ventas, controlar stock, turnos de empleados
-            y generar reportes para mejorar la operacion diaria.
-        </p>
+        <section class="project-detail section-shell">
+            <div class="project-summary-grid">
+                <article class="project-spotlight reveal">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <div class="imagenes"><img src="img/main.png" alt="Pantalla principal del sistema de kiosco" loading="lazy"></div>
+                            <p>Vista principal del sistema con enfoque operativo y acceso rapido a modulos.</p>
+                        </div>
+                    </div>
+                </article>
 
-        <h2>Tecnologias Utilizadas</h2>
-        <div class="tech-container">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Tkinter</span>
-            <span class="tech-badge">MySQL</span>
-            <span class="tech-badge">POO</span>
-        </div>
+                <article class="project-overview reveal">
+                    <span class="feature-project-tag">Stack principal</span>
+                    <div class="tech-container">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Tkinter</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">POO</span>
+                    </div>
+                    <p><strong>Problema que resuelve:</strong> unificar ventas, stock, turnos, proveedores y reportes para tener control completo de la operacion de un kiosco.</p>
+                    <p><strong>Enfoque tecnico:</strong> arquitectura modular orientada a objetos, persistencia en base de datos y flujos de trabajo pensados para el uso diario.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/sergiorc182/Kiosco-CRM" class="button button-secondary" target="_blank" rel="noopener noreferrer">Ver codigo</a>
+                        <a href="proyectos.html" class="button button-primary">Volver a proyectos</a>
+                    </div>
+                </article>
+            </div>
 
-        <h2>Caracteristicas Principales</h2>
-        <ul class="features-list">
-            <li>Interfaz grafica intuitiva con Tkinter.</li>
-            <li>Sistema de login con roles de administrador y empleado.</li>
-            <li>CRUD completo para productos, clientes y proveedores.</li>
-            <li>Sistema de ventas con generacion de tickets.</li>
-            <li>Control de stock con alertas automaticas.</li>
-            <li>Reportes de ventas diarias, semanales y mensuales.</li>
-            <li>Backup automatico de la base de datos.</li>
-            <li>Sistema de busqueda avanzada de productos.</li>
-            <li>Gestion de multiples usuarios con permisos.</li>
-        </ul>
+            <div class="detail-grid">
+                <article class="detail-card reveal">
+                    <h2>Descripcion</h2>
+                    <p>
+                        Desarrolle este sistema para cubrir necesidades reales de gestion en un comercio pequeno.
+                        La aplicacion permite registrar ventas, administrar inventario, gestionar turnos de empleados y
+                        llevar seguimiento de proveedores con una interfaz clara y directa.
+                    </p>
+                </article>
 
-        <h2>Estructura del Proyecto</h2>
-        <p>El proyecto sigue una arquitectura modular con las siguientes capas:</p>
-        <ul class="features-list">
-            <li><strong>login.py:</strong> ventana de autenticacion de usuarios.</li>
-            <li><strong>main_app.py:</strong> aplicacion principal del sistema.</li>
-            <li><strong>turno.py:</strong> gestion de turnos para empleados.</li>
-            <li><strong>base de datos:</strong> configuracion y persistencia de informacion.</li>
-            <li><strong>Modulos:</strong> clases de negocio como producto, venta, inventario y gastos.</li>
-        </ul>
+                <article class="detail-card reveal">
+                    <h2>Funcionalidades clave</h2>
+                    <ul class="features-list">
+                        <li>Login con roles de administrador y empleado.</li>
+                        <li>CRUD de productos, clientes y proveedores.</li>
+                        <li>Ventas con tickets y seguimiento diario.</li>
+                        <li>Control de stock con alertas.</li>
+                        <li>Reportes operativos para analisis del negocio.</li>
+                    </ul>
+                </article>
 
-        <div class="nav-links">
-            <a href="proyectos.html" class="nav-link">← Volver a Proyectos</a>
-            <a href="proyecto-farmacia.html" class="nav-link">Ver proyecto Farmacia POS →</a>
-        </div>
-    </section>
+                <article class="detail-card reveal">
+                    <h2>Aprendizajes tecnicos</h2>
+                    <ul class="features-list">
+                        <li>Modelado de logica de negocio con POO.</li>
+                        <li>Separacion de modulos y responsabilidades.</li>
+                        <li>Conexion entre interfaz de escritorio y base de datos.</li>
+                        <li>Diseno de flujos simples para usuarios no tecnicos.</li>
+                    </ul>
+                </article>
+            </div>
 
-    <section class="galeria">
-        <div class="imagenes"><img src="img/Login.png" alt="Login - Sistema Kiosco" loading="lazy"></div>
-        <div class="imagenes"><img src="img/main.png" alt="Pantalla principal - Sistema Kiosco" loading="lazy"></div>
-        <div class="imagenes"><img src="img/caja.png" alt="Caja - Sistema Kiosco" loading="lazy"></div>
-        <div class="imagenes"><img src="img/venta.png" alt="Ventas - Sistema Kiosco" loading="lazy"></div>
-        <div class="imagenes"><img src="img/crearusuario.png" alt="Crear usuario - Sistema Kiosco" loading="lazy"></div>
-        <div class="imagenes"><img src="img/inventario.png" alt="Inventario - Sistema Kiosco" loading="lazy"></div>
-        <div class="imagenes"><img src="img/turnos.png" alt="Turnos - Sistema Kiosco" loading="lazy"></div>
-        <div class="imagenes"><img src="img/proveedor.png" alt="Proveedor - Sistema Kiosco" loading="lazy"></div>
-    </section>
+            <div class="nav-links reveal">
+                <a href="proyectos.html" class="button button-secondary">← Volver a proyectos</a>
+                <a href="proyecto-farmacia.html" class="button button-primary">Ver proyecto Farmacia POS →</a>
+            </div>
+        </section>
+
+        <section class="galeria section-shell">
+            <div class="imagenes reveal"><img src="img/Login.png" alt="Login del sistema de kiosco" loading="lazy"></div>
+            <div class="imagenes reveal"><img src="img/main.png" alt="Dashboard del sistema de kiosco" loading="lazy"></div>
+            <div class="imagenes reveal"><img src="img/caja.png" alt="Modulo de caja del sistema de kiosco" loading="lazy"></div>
+            <div class="imagenes reveal"><img src="img/venta.png" alt="Modulo de ventas del sistema de kiosco" loading="lazy"></div>
+            <div class="imagenes reveal"><img src="img/crearusuario.png" alt="Gestion de usuarios del sistema de kiosco" loading="lazy"></div>
+            <div class="imagenes reveal"><img src="img/inventario.png" alt="Inventario del sistema de kiosco" loading="lazy"></div>
+            <div class="imagenes reveal"><img src="img/turnos.png" alt="Turnos del sistema de kiosco" loading="lazy"></div>
+            <div class="imagenes reveal"><img src="img/proveedor.png" alt="Modulo de proveedores del sistema de kiosco" loading="lazy"></div>
+        </section>
+    </main>
 
     <canvas id="background"></canvas>
     <script src="js/script.js"></script>

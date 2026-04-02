@@ -1,82 +1,72 @@
-// =============================
-// FONDO DE PARTICULAS VIOLETAS
-// =============================
 const canvas = document.getElementById("background");
 const ctx = canvas.getContext("2d");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = window.matchMedia("(pointer: fine)").matches;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function setCanvasSize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
 
-let particlesArray = [];
-const colors = ["#a855f7", "#c77dff", "#e0aaff", "#9d4edd"];
-const numParticles = 80;
+setCanvasSize();
+
+const particlesArray = [];
+const colors = ["rgba(102, 227, 255, 0.8)", "rgba(139, 123, 255, 0.8)", "rgba(255, 255, 255, 0.55)"];
+const numParticles = prefersReducedMotion ? 24 : 54;
 
 class Particle {
-    constructor(x, y, radius, dx, dy, color) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.dx = dx;
-        this.dy = dy;
-        this.color = color;
+    constructor() {
+        this.reset(true);
+    }
+
+    reset(initial = false) {
+        this.x = Math.random() * canvas.width;
+        this.y = initial ? Math.random() * canvas.height : canvas.height + Math.random() * 40;
+        this.radius = Math.random() * 2.6 + 1.2;
+        this.speedX = (Math.random() - 0.5) * 0.25;
+        this.speedY = Math.random() * 0.42 + 0.12;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
     }
 
     draw() {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = this.color;
         ctx.shadowColor = this.color;
-        ctx.shadowBlur = 20;
+        ctx.shadowBlur = 18;
         ctx.fill();
     }
 
     update() {
-        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
-            this.dx = -this.dx;
+        this.x += this.speedX;
+        this.y -= this.speedY;
+
+        if (this.y < -20 || this.x < -20 || this.x > canvas.width + 20) {
+            this.reset();
         }
 
-        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
-            this.dy = -this.dy;
-        }
-
-        this.x += this.dx;
-        this.y += this.dy;
         this.draw();
     }
 }
 
-function initParticles() {
-    particlesArray = [];
-
-    for (let i = 0; i < numParticles; i++) {
-        const radius = Math.random() * 4 + 2;
-        const x = Math.random() * (canvas.width - radius * 2) + radius;
-        const y = Math.random() * (canvas.height - radius * 2) + radius;
-        const dx = (Math.random() - 0.5) * 1.5;
-        const dy = (Math.random() - 0.5) * 1.5;
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        particlesArray.push(new Particle(x, y, radius, dx, dy, color));
-    }
+for (let i = 0; i < numParticles; i++) {
+    particlesArray.push(new Particle());
 }
 
 function animateParticles() {
-    requestAnimationFrame(animateParticles);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     particlesArray.forEach((particle) => particle.update());
+    if (!prefersReducedMotion) {
+        requestAnimationFrame(animateParticles);
+    }
 }
 
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    initParticles();
-});
-
-initParticles();
 animateParticles();
 
-// =============================
-// MENU MOBILE
-// =============================
+window.addEventListener("resize", () => {
+    setCanvasSize();
+});
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".navbar ul");
 
@@ -104,71 +94,86 @@ if (menuToggle && navMenu) {
     });
 }
 
-// =============================
-// EFECTO DE ESTRELLA FUGAZ
-// =============================
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const finePointer = window.matchMedia("(pointer: fine)").matches;
+const revealElements = document.querySelectorAll(".reveal");
+
+if (revealElements.length) {
+    if (prefersReducedMotion) {
+        revealElements.forEach((element) => element.classList.add("is-visible"));
+    } else {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.16,
+            rootMargin: "0px 0px -40px 0px"
+        });
+
+        revealElements.forEach((element) => observer.observe(element));
+    }
+}
 
 if (!prefersReducedMotion && finePointer) {
     const cursorCanvas = document.createElement("canvas");
     document.body.appendChild(cursorCanvas);
     const cctx = cursorCanvas.getContext("2d");
 
-    cursorCanvas.width = window.innerWidth;
-    cursorCanvas.height = window.innerHeight;
+    function setCursorCanvasSize() {
+        cursorCanvas.width = window.innerWidth;
+        cursorCanvas.height = window.innerHeight;
+    }
+
+    setCursorCanvasSize();
     cursorCanvas.style.position = "fixed";
-    cursorCanvas.style.top = "0";
-    cursorCanvas.style.left = "0";
+    cursorCanvas.style.inset = "0";
     cursorCanvas.style.pointerEvents = "none";
     cursorCanvas.style.zIndex = "999";
 
-    let stars = [];
+    let sparks = [];
 
-    class Star {
+    class Spark {
         constructor(x, y) {
             this.x = x;
             this.y = y;
-            this.size = Math.random() * 3 + 2;
-            this.opacity = 1;
-            this.vx = (Math.random() - 0.5) * 2;
-            this.vy = (Math.random() - 0.5) * 2;
+            this.size = Math.random() * 2 + 1;
+            this.alpha = 1;
+            this.vx = (Math.random() - 0.5) * 1.8;
+            this.vy = (Math.random() - 0.5) * 1.8;
         }
 
         draw() {
             cctx.beginPath();
-            cctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-            cctx.fillStyle = `rgba(200, 0, 255, ${this.opacity})`;
-            cctx.shadowColor = "#d400ff";
-            cctx.shadowBlur = 20;
+            cctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            cctx.fillStyle = `rgba(102, 227, 255, ${this.alpha})`;
+            cctx.shadowColor = "rgba(102, 227, 255, 0.9)";
+            cctx.shadowBlur = 14;
             cctx.fill();
         }
 
         update() {
             this.x += this.vx;
             this.y += this.vy;
-            this.opacity -= 0.02;
+            this.alpha -= 0.03;
             this.draw();
         }
     }
 
-    function animateStars() {
-        requestAnimationFrame(animateStars);
+    function animateSparks() {
         cctx.clearRect(0, 0, cursorCanvas.width, cursorCanvas.height);
-        stars = stars.filter((star) => star.opacity > 0);
-        stars.forEach((star) => star.update());
+        sparks = sparks.filter((spark) => spark.alpha > 0);
+        sparks.forEach((spark) => spark.update());
+        requestAnimationFrame(animateSparks);
     }
 
     window.addEventListener("mousemove", (event) => {
-        for (let i = 0; i < 5; i++) {
-            stars.push(new Star(event.clientX, event.clientY));
+        for (let i = 0; i < 3; i++) {
+            sparks.push(new Spark(event.clientX, event.clientY));
         }
     });
 
-    window.addEventListener("resize", () => {
-        cursorCanvas.width = window.innerWidth;
-        cursorCanvas.height = window.innerHeight;
-    });
-
-    animateStars();
+    window.addEventListener("resize", setCursorCanvasSize);
+    animateSparks();
 }
